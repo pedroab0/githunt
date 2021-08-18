@@ -51,13 +51,13 @@ export function Feed() {
         const filters = transformFilters({ language, startDate, endDate });
         const filtersQuery = new URLSearchParams(filters).toString();
 
-        get(`/search/repositories?${filtersQuery}`).then((res) => {
+        get(`/search/repositories?${filtersQuery}`).then((data) => {
             setRepositories([
                 ...repositories,
                 {
                     startDate,
                     endDate,
-                    items: res.items,
+                    items: data.items,
                 },
             ]);
         });
