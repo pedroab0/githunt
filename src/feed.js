@@ -61,7 +61,7 @@ export function Feed() {
                 },
             ]);
         });
-    }, [startDate]);
+    }, [startDate, endDate, language, get]);
 
     return (
         <Box maxW="1200px" mx="auto" px="18px">
